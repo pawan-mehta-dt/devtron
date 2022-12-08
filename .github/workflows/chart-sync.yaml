@@ -24,13 +24,13 @@ jobs:
         fetch-depth: 0
     - uses: pawan-mehta-dt/git-repo-sync@master
       with:
-        script-file: ${{ secrets.CHART_SYNC_SCRIPT_FILE }}
-        git-target-repo: ${{ secrets.GIT_TARGET_REPO }}
-        git-source-repo: ${{ secrets.GIT_SOURCE_REPO }}
-        git-target-useremail: ${{ secrets.GIT_TARGET_EMAIL }}
-        git-target-username: ${{ secrets.GIT_TARGET_USERNAME }}
+        script-file: chart-sync.sh
+        git-target-repo: https://github.com/pawan-mehta-dt/actions-test.git
+        git-source-repo: https://github.com/pawan-mehta-dt/automatic-release.git
+        git-target-useremail: pawan.mehta@devtron.ai
+        git-target-username: pawan-mehta-dt
         git-target-token: ${{ secrets.GIT_TARGET_TOKEN }}
-        git-target-dir: ${{ secrets.GIT_TARGET_DIR }}
-        git-source-dir: ${{ secrets.GIT_SOURCE_DIR }}
-        working-dir: ${{ secrets.WORKING_DIR }}
+        git-target-dir: ./
+        git-source-dir: ./
+        working-dir: $PWD
         RELEASE_BRANCH: "main"
