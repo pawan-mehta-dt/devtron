@@ -33,4 +33,4 @@ jobs:
         git-target-dir: ./
         git-source-dir: ./
         working-dir: $PWD
-        RELEASE_BRANCH: "main"
+        RELEASE_BRANCH: "fix-chart-sync"
