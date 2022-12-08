@@ -24,7 +24,7 @@ jobs:
         fetch-depth: 0
     - uses: pawan-mehta-dt/git-repo-sync@master
       with:
-        script-file: chart-sync.sh
+        script-file: chart-sync
         git-target-repo: https://github.com/pawan-mehta-dt/actions-test.git
         git-source-repo: https://github.com/pawan-mehta-dt/automatic-release.git
         git-target-useremail: pawan.mehta@devtron.ai
